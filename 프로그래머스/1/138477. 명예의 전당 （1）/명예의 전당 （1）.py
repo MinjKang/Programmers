@@ -14,6 +14,3 @@ def solution(k, score):
         min_answer_list.append(min_answer)
         
     return min_answer_list
-        
-        
-    
