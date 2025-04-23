@@ -4,13 +4,6 @@ def solution(nums):
         answer = len(set(nums))
     return answer
     
-    
-    
-    
-    
-    
-    
-    
 #     answer = 0
 #     answer = len(set(nums))
     
