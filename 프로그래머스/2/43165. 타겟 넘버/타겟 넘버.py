@@ -2,18 +2,20 @@ from collections import deque
 
 def solution(numbers, target):
     queue = deque()
-    queue.append((0, 0))  
-
-    count = 0  
-
+    queue.append((0, 0))
+    count = 0
+    # print(queue)
+    
     while queue:
-        current_sum, index = queue.popleft()
-
+        queue_sum, index = queue.popleft()
+        
         if index == len(numbers):
-            if current_sum == target:
+            if queue_sum == target:
                 count += 1
+    
         else:
-            queue.append((current_sum + numbers[index], index + 1))
-            queue.append((current_sum - numbers[index], index + 1))
+            queue.append((queue_sum + numbers[index], index+1))
+            queue.append((queue_sum - numbers[index], index+1))
 
+    # print(count)
     return count
